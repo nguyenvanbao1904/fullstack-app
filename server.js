@@ -7,7 +7,7 @@ const port = 3000;
 app.use(cors());
 app.use(helmet());
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
     res.json("api");
 });
 
