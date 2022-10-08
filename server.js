@@ -10,6 +10,7 @@ app.use(helmet());
 app.get("/", (req, res) => {
     res.json("api");
 });
+
 app.listen(port, function () {
     console.log(`server is running on port: ${port}`);
 });
