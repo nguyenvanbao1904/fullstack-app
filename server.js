@@ -1,6 +1,11 @@
 const express = require("express");
 const app = express();
+var cors = require("cors");
+const helmet = require("helmet");
 const port = 3000;
+
+app.use(cors());
+app.use(helmet());
 
 app.get("/", (req, res) => {
     res.json("api");
