@@ -11,6 +11,11 @@ app.get("/api", (req, res) => {
     res.json("api");
 });
 
+app.use(express.static(path.join(__dirname, "./client/build")));
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
 app.listen(port, function () {
     console.log(`server is running on port: ${port}`);
 });
